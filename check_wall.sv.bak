@@ -1,0 +1,24 @@
+module check_wall(
+    input  [4:0] x,
+    input  [4:0] y,
+    output [3:0] turnable //up down left right
+);
+    parameter [0:11][47:0] maze_direction = 
+    {
+        48'h053736537360,
+        48'h0c0c0cc0c0c0,
+        48'h0d3f7bb7f3e0,
+        48'h093e9655d3a0,
+        48'h000a5bb6c000,
+        48'h013fe00df320,
+        48'h000ca00cc000,
+        48'h000cd33ec000,
+        48'h053fb65bf360,
+        48'h096d7bb7e5a0,
+        48'h05ba965a9b60,
+        48'h09333bb333a0
+    }
+
+    assign turnable = maze_direction[y][47-4*x : 48-4*(x+1)];
+
+endmodule
