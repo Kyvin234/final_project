@@ -1,98 +1,112 @@
-Quartus Prime Archive log --	C:/Quartus/ece385_lab8/ece385_lab8_tmp_archive.qarlog
+Quartus Prime Archive log --	C:/Users/Kevin/Documents/ece385_pacman/ece385_lab8_tmp_archive.qarlog
 
-Archive:	C:/Quartus/ece385_lab8/ece385_lab8_tmp_archive.qar
-Date:		Fri Oct 23 17:16:17 2020
+Archive:	C:/Users/Kevin/Documents/ece385_pacman/ece385_lab8_tmp_archive.qar
+Date:		Fri Dec 11 17:21:18 2020
 Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 	=========== Files Selected: ===========
-C:/Quartus/ece385_lab8/Color_Mapper.sv
-C:/Quartus/ece385_lab8/HexDriver.sv
-C:/Quartus/ece385_lab8/VGA_controller.sv
-C:/Quartus/ece385_lab8/ball.sv
-C:/Quartus/ece385_lab8/ece385_lab8.qpf
-C:/Quartus/ece385_lab8/ece385_lab8.qsf
-C:/Quartus/ece385_lab8/lab8.sv
-C:/Quartus/ece385_lab8/lab8_soc.qsys
-C:/Quartus/ece385_lab8/lab8_soc.sopcinfo
-C:/Quartus/ece385_lab8/lab8_soc/lab8_soc.cmp
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/lab8_soc.debuginfo
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/lab8_soc.qip
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/lab8_soc.regmap
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/lab8_soc.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_avalon_sc_fifo.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_avalon_st_clock_crosser.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.sdc
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_avalon_st_pipeline_base.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_default_burst_converter.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_incr_burst_converter.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_address_alignment.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_arbitrator.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter_new.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_burst_uncompressor.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_master_agent.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_master_translator.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_slave_agent.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_slave_translator.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_merlin_width_adapter.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_reset_controller.sdc
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_reset_controller.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_reset_synchronizer.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_std_synchronizer_nocut.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/altera_wrap_burst_converter.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_hex_digits_pio.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_irq_mapper.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_jtag_uart_0.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_key.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_keycode.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_leds_pio.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_004.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_004_error_adapter_0.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_demux.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_demux_001.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_mux.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_mux_001.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_001.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_002.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_003.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_006.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_demux.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_demux_001.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_mux.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_mux_001.sv
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.sdc
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_tck.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_ociram_default_contents.mif
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_rf_ram_a.mif
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_rf_ram_b.mif
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_test_bench.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_sdram.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_sdram_pll.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_spi_0.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_sysid_qsys_0.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_timer_0.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_usb_gpx.v
-C:/Quartus/ece385_lab8/lab8_soc/synthesis/submodules/lab8_soc_usb_rst.v
-c:/quartus/quartus/bin64/assignment_defaults.qdf
-	======= Total: 81 files to archive =======
+C:/Users/Kevin/Documents/ece385_pacman/Color_Mapper.sv
+C:/Users/Kevin/Documents/ece385_pacman/HexDriver.sv
+C:/Users/Kevin/Documents/ece385_pacman/VGA_controller.sv
+C:/Users/Kevin/Documents/ece385_pacman/ball.sv
+C:/Users/Kevin/Documents/ece385_pacman/bot_motion.sv
+C:/Users/Kevin/Documents/ece385_pacman/check_count_dot.sv
+C:/Users/Kevin/Documents/ece385_pacman/check_count_row.sv
+C:/Users/Kevin/Documents/ece385_pacman/check_wall.sv
+C:/Users/Kevin/Documents/ece385_pacman/control_unit.sv
+C:/Users/Kevin/Documents/ece385_pacman/dot_map.sv
+C:/Users/Kevin/Documents/ece385_pacman/ece385_lab8.qpf
+C:/Users/Kevin/Documents/ece385_pacman/ece385_lab8.qsf
+C:/Users/Kevin/Documents/ece385_pacman/ece385_lab8.sv
+C:/Users/Kevin/Documents/ece385_pacman/font_sprites.sv
+C:/Users/Kevin/Documents/ece385_pacman/ghost2_motion.sv
+C:/Users/Kevin/Documents/ece385_pacman/ghost3_motion.sv
+C:/Users/Kevin/Documents/ece385_pacman/ghost_motion.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc.qsys
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc.sopcinfo
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/lab8_soc.cmp
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/lab8_soc.debuginfo
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/lab8_soc.qip
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/lab8_soc.regmap
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/lab8_soc.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_avalon_sc_fifo.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_avalon_st_clock_crosser.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.sdc
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_avalon_st_pipeline_base.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_default_burst_converter.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_incr_burst_converter.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_address_alignment.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter_new.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_master_agent.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_master_translator.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_slave_agent.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_slave_translator.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_merlin_width_adapter.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_reset_controller.sdc
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_reset_controller.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_reset_synchronizer.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_std_synchronizer_nocut.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/altera_wrap_burst_converter.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_hex_digits_pio.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_irq_mapper.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_jtag_uart_0.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_key.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_keycode.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_leds_pio.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_004.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_004_error_adapter_0.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_demux.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_demux_001.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_mux.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_mux_001.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_001.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_002.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_003.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_006.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_demux.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_demux_001.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_mux.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_mux_001.sv
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.sdc
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_tck.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_ociram_default_contents.mif
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_rf_ram_a.mif
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_rf_ram_b.mif
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_test_bench.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_sdram.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_sdram_pll.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_spi_0.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_sysid_qsys_0.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_timer_0.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_usb_gpx.v
+C:/Users/Kevin/Documents/ece385_pacman/lab8_soc/synthesis/submodules/lab8_soc_usb_rst.v
+C:/Users/Kevin/Documents/ece385_pacman/maze-sprites.sv
+C:/Users/Kevin/Documents/ece385_pacman/motion_predict.sv
+C:/Users/Kevin/Documents/ece385_pacman/pac_sprites.sv
+c:/intelfpga_lite/18.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 95 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
 
 
-******* Archived project restoration attempt on Fri Oct 23 17:16:21 2020
-Source archive file:	C:/Quartus/ece385_lab8/ece385_lab8_tmp_archive.qar
-Archive was extracted into	C:/Quartus/yuey8_wangy2_lab8/
+******* Archived project restoration attempt on Fri Dec 11 17:21:20 2020
+Source archive file:	C:/Users/Kevin/Documents/ece385_pacman/ece385_lab8_tmp_archive.qar
+Archive was extracted into	C:/Users/Kevin/Documents/yuey8_wangy2_pacman/
 		 - successfully.

@@ -1,5 +1,5 @@
 module dot_map(
-		input  logic frame_clk,Reset,
+		input  logic frame_clk,Reset,game_reset,
 		input  [9:0] dx,
 		input  [9:0] dy,
 		input  [9:0] px,
@@ -23,7 +23,16 @@ module dot_map(
 	begin
 		for(int i=0; i<12; i++) 
 		begin
-			dot_map[i] = 12'hfff;
+			if(i == 4 || i == 7)
+				dot_map[i] = 12'h1f8;
+			// else if (i == 1)
+			// 	dot_map[i] = 12'h56a;
+			else if (i == 5)
+				dot_map[i] = 12'h79e;
+			else if (i == 6)
+				dot_map[i] = 12'h198;
+			else	
+				dot_map[i] = 12'h3fe;
 		end
 	end
 
@@ -39,7 +48,7 @@ module dot_map(
 	check_count_row d9(.row(dot_map[2]), .count(c2));
 	check_count_row d10(.row(dot_map[1]), .count(c1));
 	check_count_row d11(.row(dot_map[0]), .count(c0));
-	assign score = c0+c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11;
+	assign score = c0+c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11-8'd40;
 	always_comb
 	begin
 		// dot_temp = 1'b0
@@ -84,18 +93,21 @@ module dot_map(
 
 
 
-		always_ff @ (posedge Reset or posedge frame_clk )
+		always_ff @ (posedge Reset or posedge frame_clk or posedge game_reset)
 		begin
-			// if((py_index == 1 && px_index == 1) || (py_index == 1 && px_index == 2) || (py_index == 1 && px_index == 3) ||  (py_index == 1 && px_index == 4) || (py_index == 1 && px_index == 5) || (py_index == 1 && px_index == 6) || (py_index == 1 && px_index == 7) || (py_index == 1 && px_index == 8) || (py_index == 1 && px_index == 9) || (py_index == 1 && px_index == 10) || (py_index == 1 && px_index == 11) || (py_index == 1 && px_index == 12))
-			// begin
-				// dot_map[6] <= dot_map[6] & ~(12'b100000000000 >> (4-1));
-				// dot_map[4] <= dot_map[4] & ~(12'b100000000000 >> (5-1));
-			if(Reset)
+			if(Reset || game_reset)
 			begin
 				// score <= 8'h00;
 				for(int i=0; i<12; i++) 
 				begin
-					dot_map[i] = 12'hfff;
+					if(i == 4 || i == 7)
+						dot_map[i] = 12'h1f8;
+					else if (i == 5)
+						dot_map[i] = 12'h79e;
+					else if (i == 6)
+						dot_map[i] = 12'h198;
+					else	
+						dot_map[i] = 12'h7fe;
 				end
 			end
 			else
@@ -105,103 +117,51 @@ module dot_map(
 				case(py_index-1)
 					5'h0:
 					begin
-						// temp_row <= dot_map[0];
-						// temp_y <= py_index;
-						// temp_col <= {dot_map[0][0],dot_map[1][0], dot_map[2][0], dot_map[3][0], dot_map[4][0],dot_map[5][0], dot_map[6][0], dot_map[7][0],dot_map[8][0], dot_map[9][0], dot_map[10][0], dot_map[11][0]};
 						dot_map[0] <= dot_map[0] & ~(12'b100000000000 >> (px_index-1));
-						// if((temp_row != dot_map[0]) ^ (temp_y != py_index) == 1'b1)
-						// 	score <= score + 1;
 					end
 					5'h1:
 					begin
-						// temp_row <= dot_map[1];
-						// temp_y <= py_index;
-						// temp_col <= {dot_map[0][1],dot_map[1][1], dot_map[2][1], dot_map[3][1], dot_map[4][1],dot_map[5][1], dot_map[6][1], dot_map[7][1],dot_map[8][1], dot_map[9][1], dot_map[10][1], dot_map[11][1]};
 						dot_map[1] <= dot_map[1] & ~(12'b100000000000 >> (px_index-1));
-						// if((temp_row != dot_map[1]) ^ (temp_y != py_index) == 1'b1)
-							// score <= score + 1;
 					end
 					5'h2:
 					begin
-						// temp_row <= dot_map[2];
-						// temp_y <= py_index;
-						// temp_col <= {dot_map[0][2],dot_map[1][2], dot_map[2][2], dot_map[3][2], dot_map[4][2],dot_map[5][2], dot_map[6][2], dot_map[7][2],dot_map[8][2], dot_map[9][2], dot_map[10][2], dot_map[11][2]};
 						dot_map[2] <= dot_map[2] & ~(12'b100000000000 >> (px_index-1));
-						// if(temp_row != dot_map[2] || temp_col != {dot_map[0][2],dot_map[1][2], dot_map[2][2], dot_map[3][2], dot_map[4][2],dot_map[5][2], dot_map[6][2], dot_map[7][2],dot_map[8][2], dot_map[9][2], dot_map[10][2], dot_map[11][2]})
-						// if((temp_row != dot_map[2]) ^ (temp_y != py_index) == 1'b1)
-						// 	score <= score + 1;
 					end
 					5'h3:
-begin
-						// temp_y <= py_index;
-						// temp_row <= dot_map[3];
+					begin
 						dot_map[3] <= dot_map[3] & ~(12'b100000000000 >> (px_index-1));
-						// if((temp_row != dot_map[3]) ^ (temp_y != py_index) == 1'b1)
-						// 	score <= score + 1;
 					end
 					5'h4:
-begin
-						// temp_y <= py_index;
-						// temp_row <= dot_map[4];
+					begin
 						dot_map[4] <= dot_map[4] & ~(12'b100000000000 >> (px_index-1));
-						// if((temp_row != dot_map[4]) ^ (temp_y != py_index) == 1'b1)
-						// 	score <= score + 1;
 					end
 					5'h5:
-begin
-						// temp_y <= py_index;
-						// temp_row <= dot_map[5];
+					begin
 						dot_map[5] <= dot_map[5] & ~(12'b100000000000 >> (px_index-1));
-						// if((temp_row != dot_map[5]) ^ (temp_y != py_index) == 1'b1)
-						// 	score <= score + 1;
 					end
 					5'h6:
-begin
-// 						temp_y <= py_index;
-// 						temp_row <= dot_map[6];
+					begin
 						dot_map[6] <= dot_map[6] & ~(12'b100000000000 >> (px_index-1));
-						// if(temp_row != dot_map[6]  && temp_y != py_index)
-						// 	score <= score + 1;
 					end
 					5'h7:
-begin
-						// temp_y <= py_index;
-						// temp_row <= dot_map[7];
+					begin
 						dot_map[7] <= dot_map[7] & ~(12'b100000000000 >> (px_index-1));
-						// if(temp_row != dot_map[7] && temp_y != py_index)
-							// score <= score + 1;
 					end
 					5'h8:
-begin
-						// temp_y <= py_index;
-						// temp_row <= dot_map[8];
-						dot_map[8] <= dot_map[8] & ~(12'b100000000000 >> (px_index-1));
-						// if(temp_row != dot_map[8] && temp_y != py_index)
-							// score <= score + 1;
+					begin
+						dot_map[8] <= dot_map[8] & ~(12'b100000000000 >> (px_index-1));	
 					end
 					5'h9:
-begin
-						// temp_y <= py_index;
-						// temp_row <= dot_map[9];
+					begin
 						dot_map[9] <= dot_map[9] & ~(12'b100000000000 >> (px_index-1));
-						// if(temp_row != dot_map[9] && temp_y != py_index)
-							// score <= score + 1;
 					end
 					5'ha:
-begin
-						// temp_y <= py_index;
-						// temp_row <= dot_map[10];
+					begin
 						dot_map[10] <= dot_map[10] & ~(12'b100000000000 >> (px_index-1));
-						// if(temp_row != dot_map[10]  && temp_y != py_index)
-							// score <= score + 1;
 					end
 					5'hb:
-begin
-						// temp_y <= py_index;
-						// temp_row <= dot_map[11];
-						dot_map[11] <= dot_map[11] & ~(12'b100000000000 >> (px_index-1));
-						// if(temp_row != dot_map[11]  && temp_y != py_index)
-							// score <= score + 1;
+					begin
+						dot_map[11] <= dot_map[11] & ~(12'b100000000000 >> (px_index-1));	
 					end
 					default:;
 				endcase

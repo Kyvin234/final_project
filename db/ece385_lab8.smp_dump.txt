@@ -1,4 +1,55 @@
 
+State Machine - |lab8|control_unit:cu|level
+Name level.00 level.10 level.01 
+level.00 0 0 0 
+level.01 1 0 1 
+level.10 1 1 0 
+
+State Machine - |lab8|control_unit:cu|state
+Name state.lose state.win state.transition state.game_3 state.game_2 state.game_1 state.start 
+state.start 0 0 0 0 0 0 0 
+state.game_1 0 0 0 0 0 1 1 
+state.game_2 0 0 0 0 1 0 1 
+state.game_3 0 0 0 1 0 0 1 
+state.transition 0 0 1 0 0 0 1 
+state.win 0 1 0 0 0 0 1 
+state.lose 1 0 0 0 0 0 1 
+
+State Machine - |lab8|color_mapper:c|ghost3:ghost_motion_4|Direction
+Name Direction.0011 Direction.0010 Direction.0001 Direction.0000 
+Direction.0000 0 0 0 0 
+Direction.0001 0 0 1 1 
+Direction.0010 0 1 0 1 
+Direction.0011 1 0 0 1 
+
+State Machine - |lab8|color_mapper:c|ghost3:ghost_motion_3|Direction
+Name Direction.0011 Direction.0010 Direction.0001 Direction.0000 
+Direction.0000 0 0 0 0 
+Direction.0001 0 0 1 1 
+Direction.0010 0 1 0 1 
+Direction.0011 1 0 0 1 
+
+State Machine - |lab8|color_mapper:c|ghost2:ghost_motion_2|Direction
+Name Direction.0011 Direction.0010 Direction.0001 Direction.0000 
+Direction.0000 0 0 0 0 
+Direction.0001 0 0 1 1 
+Direction.0010 0 1 0 1 
+Direction.0011 1 0 0 1 
+
+State Machine - |lab8|color_mapper:c|ghost:ghost_motion_1|ai_motion
+Name ai_motion.left ai_motion.right ai_motion.up ai_motion.down 
+ai_motion.down 0 0 0 0 
+ai_motion.up 0 0 1 1 
+ai_motion.right 0 1 0 1 
+ai_motion.left 1 0 0 1 
+
+State Machine - |lab8|color_mapper:c|ghost:ghost_motion_1|Direction
+Name Direction.0011 Direction.0010 Direction.0001 Direction.0000 
+Direction.0000 0 0 0 0 
+Direction.0001 0 0 1 1 
+Direction.0010 0 1 0 1 
+Direction.0011 1 0 0 1 
+
 State Machine - |lab8|lab8_soc:u0|lab8_soc_sdram:sdram|m_next
 Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
 m_next.000000001 0 0 0 0 

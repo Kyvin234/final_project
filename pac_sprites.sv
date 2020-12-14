@@ -1,3 +1,4 @@
+//from internet
 module pacman_sprites ( input [7:0]	addr,
 						output [31:0]	data
 					 );

@@ -73,10 +73,14 @@ logic Reset_h, vssig, blank, sync, VGA_Clk;
 	logic [7:0] keycode;
 	logic [2:0] Direction; //0 up 1 down 2 left 3 right
 	logic [3:0] test, test2;
+	logic start_on, game_1_on, game_2_on, game_3_on, win_on,lose_on, transition_on;
 	// logic xtest
 	logic [9:0] DX, DY;
 	// assign bs = 16;
-	logic [7:0] score, xtest;
+	logic [7:0] score;
+	logic [1:0] ai_test;
+	logic [4:0] ghostx, ghosty;
+	logic die, game_reset;
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -99,16 +103,16 @@ logic Reset_h, vssig, blank, sync, VGA_Clk;
 	assign ARDUINO_IO[6] = 1'b1;
 	
 	//HEX drivers to convert numbers to HEX output
-	HexDriver hex_driver4 (xtest[7:4], HEX4[6:0]);
+	HexDriver hex_driver4 ({start_on, game_on}, HEX4[6:0]);
 	assign HEX4[7] = 1'b1;
 	
-	HexDriver hex_driver3 (xtest[3:0], HEX3[6:0]);
+	HexDriver hex_driver3 ({win_on, lose_on}, HEX3[6:0]);
 	assign HEX3[7] = 1'b1;
 	
-	HexDriver hex_driver1 (score[7:4], HEX1[6:0]);
+	HexDriver hex_driver1 (ghostx, HEX1[6:0]);
 	assign HEX1[7] = 1'b1;
 	
-	HexDriver hex_driver0 (score[3:0], HEX0[6:0]);
+	HexDriver hex_driver0 (ghosty, HEX0[6:0]);
 	assign HEX0[7] = 1'b0;
 	
 	//fill in the hundreds digit as well as the negative sign
@@ -166,6 +170,7 @@ logic Reset_h, vssig, blank, sync, VGA_Clk;
 
 //instantiate a vga_controller, ball, and color_mapper here with the ports.
 vga_controller v1(.Clk(Clk), .Reset(Reset_h), .hs(VGA_HS), .vs(VGA_VS), .pixel_clk(VGA_Clk), .blank(blank), .sync(sync), .DrawX(drawxsig), .DrawY(drawysig));
-ball b(.Reset(Reset_h), .frame_clk(VGA_VS), .keycode(keycode), .BallX(ballxsig), .BallY(ballysig), .BallS(ballsizesig), .Direction(Direction), .test(test), .test2(test2));
-color_mapper c(.Reset(Reset_h), .frame_clk(VGA_VS), .BallX(ballxsig), .BallY(ballysig), .DrawX(drawxsig), .DrawY(drawysig), .Ball_size(ballsizesig), .Red(Red), .Green(Green), .Blue(Blue), .Direction(Direction),.score(score), .xtest(xtest));
+ball b(.Reset(Reset_h), .frame_clk(VGA_VS), .keycode(keycode), .BallX(ballxsig), .BallY(ballysig), .BallS(ballsizesig), .Direction(Direction), .test(test), .test2(test2), .game_reset(start_on || transition_on));
+color_mapper c(.Reset(Reset_h), .frame_clk(VGA_VS), .BallX(ballxsig), .BallY(ballysig), .DrawX(drawxsig), .DrawY(drawysig), .Ball_size(ballsizesig), .Red(Red), .Green(Green), .Blue(Blue), .Direction(Direction),.score(score), .ai_test(ai_test),  .start_on(start_on), .game_1_on(game_1_on), .game_2_on(game_2_on), .game_3_on(game_3_on), .win_on(win_on), .lose_on(lose_on), .die(die), .transition_on(transition_on), .ghostx(ghostx), .ghosty(ghosty));
+control_unit cu(.Clk(Clk), .Reset(Reset_h), .score(score), .keycode(keycode), .die(die), .start_on(start_on), .game_1_on(game_1_on), .game_2_on(game_2_on), .game_3_on(game_3_on), .win_on(win_on), .lose_on(lose_on), .transition_on(transition_on));
 endmodule
